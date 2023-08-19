@@ -6,14 +6,48 @@ const router = express.Router();
 
 // views
 router.get("/", function (_, res) {
-  res.render("index");
+  res.render("_page", {
+    pageName: "index",
+    options: {},
+  });
 });
 
-// router.get("/about", function (_, res) {
-//   res.render("about", {
-//     location: "ur mom",
-//   });
-// });
+router.get("/about", function (_, res) {
+  res.render("_page", {
+    pageName: "about",
+    options: {
+      location: "boo",
+    },
+  });
+});
+
+router.get("/bread", function (_, res) {
+  res.render("_page", {
+    pageName: "bread",
+    options: {},
+  });
+});
+
+router.get("/cake", function (_, res) {
+  res.render("_page", {
+    pageName: "cake",
+    options: {},
+  });
+});
+
+router.get("/videos", function (_, res) {
+  res.render("_page", {
+    pageName: "videos",
+    options: {},
+  });
+});
+
+router.get("/tools", function (_, res) {
+  res.render("_page", {
+    pageName: "tools",
+    options: {},
+  });
+});
 
 // ajax
 router.post("/lol", async function (_, res) {

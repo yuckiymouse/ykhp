@@ -2,7 +2,11 @@
 export default {
   content: ["./views/**/*.ejs", "./hx/**/*.ejs"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        'roboto': ['Roboto']
+      }
+    },
   },
   plugins: [],
 }
